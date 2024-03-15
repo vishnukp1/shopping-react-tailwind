@@ -12,7 +12,7 @@ const Home = () => {
         <Navbar/>
         <ShoppingContainer item={items}/>
         <CheckOutItems cartItem={items} />
-        <CheckOut />
+        
         <ShoppingItems item={items} />
     </div>
   )

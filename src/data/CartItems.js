@@ -15,18 +15,23 @@ export const items = [
     image: item1,
     name: "Ceramic Table Vase",
     price: 79.99,
+    aosDelay: "400",
   },
   {
     id: 2,
     image: item2,
     name: "Scissor",
     price: 4.3,
+    
+    aosDelay: "400",
   },
   {
     id: 3,
     image: item3,
     name: "Bookends",
     price: 15,
+    
+    aosDelay: "400",
   },
   {
     id: 4,

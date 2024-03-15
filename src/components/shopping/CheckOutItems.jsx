@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import { HiX } from "react-icons/hi";
 import { increase, decrease, remove }  from "../../redux/Slice/CartSlice";
@@ -5,7 +6,7 @@ import { useDispatch } from "react-redux";
 const CheckOutItems = ({ cartItem }) => {
   const dispatch = useDispatch();
   const { id, price, amount, name, image } = cartItem;
-  console.log(cartItem.name);
+ 
   return (
     <div className="flex justify-between items-center border border-solid border-glass p-4 mb-6">
       <div className="flex items-center gap-4">

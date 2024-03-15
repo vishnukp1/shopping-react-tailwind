@@ -28,9 +28,15 @@ const ProductCard = ({ data }) => {
                 />
               </div>
             </div>
-            <div className="leading-7">
+            <div className="leading-7 flex justify-between">
+              <div>
               <h2 className="font-semibold">{data.title}</h2>
               <h2 className="font-bold">${data.price}</h2>
+              </div>
+            
+              <button className="bg-grey h-10 px-3 mt-3 " >
+          Add To Cart
+        </button>
             </div>
           </div>
         ))}
