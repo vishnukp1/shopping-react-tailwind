@@ -1,23 +1,22 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useNavigate } from 'react-router-dom';
-import { FaShoppingCart } from 'react-icons/fa';
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Fashion', href: '/fashion', current: false },
-  { name: 'Baby Products', href: '/babyproducts', current: false },
-  { name: 'Mobiles, Tablets & More', href: '/electronics', current: false },
-]
+  { name: "Home", href: "/", current: true },
+  { name: "Fashion", href: "/fashion", current: false },
+  { name: "Baby Products", href: "/babyproducts", current: false },
+  { name: "Mobiles, Tablets & More", href: "/electronics", current: false },
+];
 
 function classNames(...classes) {
- 
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -49,12 +48,14 @@ export default function Navbar() {
                     {navigation.map((item) => (
                       <a
                         key={item.name}
-                        onClick={()=>navigate(item.href)}
+                        onClick={() => navigate(item.href)}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          item.current
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          "rounded-md px-3 py-2 text-sm font-medium"
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
                       </a>
@@ -62,14 +63,27 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
+
+              <input
+                type="search"
+                id="default-search"
+                className="block w-[200px] p-1 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search Products.."
+                required
+              />
+              <button
+                type="submit"
+                className="text-white h-4 pb-8 ml-2 bg-blue-200 hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-4 py-2 dark:bg-indigo-700 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Search
+              </button>
+
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">View notifications</span>
-                  <FaShoppingCart  className="h-6 w-6" aria-hidden="true" />
+                  <FaShoppingCart className="h-6 w-6" aria-hidden="true" />
                 </button>
 
                 {/* Profile dropdown */}
@@ -99,18 +113,24 @@ export default function Navbar() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Your Profile
                           </a>
                         )}
                       </Menu.Item>
-                    
+
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Sign out
                           </a>
@@ -131,10 +151,12 @@ export default function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -144,5 +166,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }

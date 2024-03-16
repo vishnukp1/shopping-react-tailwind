@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../Shared/Button";
 
 const ProductCard = ({ data }) => {
@@ -30,13 +29,11 @@ const ProductCard = ({ data }) => {
             </div>
             <div className="leading-7 flex justify-between">
               <div>
-              <h2 className="font-semibold">{data.title}</h2>
-              <h2 className="font-bold">${data.price}</h2>
+                <h2 className="font-semibold">{data.title}</h2>
+                <h2 className="font-bold">${data.price}</h2>
               </div>
-            
-              <button className="bg-grey h-10 px-3 mt-3 " >
-          Add To Cart
-        </button>
+
+              <button className="bg-grey h-10 px-3 mt-3 ">Add To Cart</button>
             </div>
           </div>
         ))}
