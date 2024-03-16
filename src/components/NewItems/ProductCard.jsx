@@ -2,14 +2,12 @@ import Button from "../Shared/Button";
 
 const ProductCard = ({ data }) => {
   return (
-    <div className="mb-10">
+    <div className="mb-10 mt-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 place-items-center">
         {/* card section */}
         {data.map((data) => (
           <div
-            data-aos="fade-up"
-            data-aos-delay={data.aosDelay}
-            className="group"
+          
             key={data.id}
           >
             <div className="relative">

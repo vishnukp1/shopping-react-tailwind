@@ -74,7 +74,7 @@ const ProductsData2 = [
 const Productss = () => {
   return (
     <div>
-      <div className="container">
+      <div className="mx-4">
         {/* Header section */}
         <Heading title="Our Products" subtitle={"Explore Our Products"} />
         {/* Body section */}

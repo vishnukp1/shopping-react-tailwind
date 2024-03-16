@@ -1,13 +1,12 @@
-
-import item1 from "../assets/product/p-1.jpg";
-import item2 from "../assets/product/p-2.jpg";
-import item3 from "../assets/product/p-3.jpg";
-import item4 from "../assets/product/p-4.jpg";
-import item5 from "../assets/product/p-5.jpg";
-import item6 from "../assets/product/p-1.jpg";
-import item7 from "../assets/product/p-2.jpg";
-import item8 from "../assets/product/p-3.jpg";
-
+import item1 from "../assets/women/women4.jpg";
+import item2 from "../assets/women/women.png";
+import item3 from "../assets/women/women2.jpg";
+import item4 from "../assets/women/women3.jpg";
+import item5 from "../assets/women/women4.jpg";
+import item6 from "../assets/women/women.png";
+import item7 from "../assets/women/women2.jpg";
+import item8 from "../assets/women/women3.jpg";
+import item9 from "../assets/women/women4.jpg";
 
 export const items = [
   {
